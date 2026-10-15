@@ -21,3 +21,9 @@ This repository contains my six-month DevOps and AWS learning work.
 2. Practise with a small task.
 3. Write notes and save evidence.
 4. Commit the work with Git.
+
+## Diagrams
+
+![Day 1 DevOps feedback loop](diagrams/day-01-devops-feedback-loop.svg)
+
+[Open the Day 1 DevOps feedback loop](diagrams/day-01-devops-feedback-loop.svg)
