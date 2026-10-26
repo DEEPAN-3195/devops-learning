@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Express API request flow</title>
+  <desc id="desc">A client sends a request to an Express server, which matches a route and returns a JSON response. Health and version routes are shown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#243b53"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#60a5fa"/>
+    </marker>
+    <style>
+      .label { font: 600 20px Inter, Segoe UI, sans-serif; fill: #e2e8f0; }
+      .small { font: 400 16px Inter, Segoe UI, sans-serif; fill: #cbd5e1; }
+      .code { font: 600 17px Consolas, monospace; fill: #bfdbfe; }
+      .box { fill: url(#node); stroke: #475569; stroke-width: 2; }
+      .line { stroke: #60a5fa; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="560" rx="28" fill="url(#bg)"/>
+  <text x="70" y="72" class="label" font-size="30">Express API request flow</text>
+  <text x="70" y="104" class="small">A predictable route response becomes evidence for testing, deployment, and monitoring.</text>
+
+  <rect x="70" y="210" width="230" height="150" rx="18" class="box"/>
+  <text x="185" y="255" text-anchor="middle" class="label">Client</text>
+  <text x="185" y="293" text-anchor="middle" class="code">curl / browser</text>
+  <text x="185" y="327" text-anchor="middle" class="small">sends HTTP request</text>
+
+  <rect x="420" y="180" width="300" height="210" rx="18" class="box"/>
+  <text x="570" y="225" text-anchor="middle" class="label">Express server</text>
+  <text x="570" y="268" text-anchor="middle" class="code">GET /health</text>
+  <text x="570" y="300" text-anchor="middle" class="code">GET /version</text>
+  <text x="570" y="345" text-anchor="middle" class="small">matches method + path</text>
+
+  <rect x="840" y="150" width="290" height="110" rx="18" class="box"/>
+  <text x="985" y="195" text-anchor="middle" class="label">Health response</text>
+  <text x="985" y="230" text-anchor="middle" class="code">{"status":"ok"}</text>
+
+  <rect x="840" y="300" width="290" height="110" rx="18" class="box"/>
+  <text x="985" y="345" text-anchor="middle" class="label">Version response</text>
+  <text x="985" y="380" text-anchor="middle" class="code">{"version":"1.0.0"}</text>
+
+  <path d="M300 285 H405" class="line"/>
+  <path d="M720 245 H825" class="line"/>
+  <path d="M720 325 H825" class="line"/>
+  <text x="352" y="270" text-anchor="middle" class="small">HTTP request</text>
+  <text x="775" y="230" text-anchor="middle" class="small">route match</text>
+  <text x="775" y="315" text-anchor="middle" class="small">route match</text>
+
+  <text x="70" y="490" class="small">DevOps use: health checks support availability checks; version responses support release verification.</text>
+</svg>
