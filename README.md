@@ -8,6 +8,7 @@ This repository contains my six-month DevOps and AWS learning work.
 - Week 1, Day 2: WSL2, Ubuntu, Git and Node.js setup
 - Week 1, Day 3: Learning repository structure
 - Week 1, Day 4: Express API with `/health` and `/version` endpoints
+- Week 1, Day 5: Automated Express API test with Node test runner and Supertest
 
 ## Repository structure
 
@@ -32,3 +33,7 @@ This repository contains my six-month DevOps and AWS learning work.
 ![Day 4 Express API request flow](diagrams/day-04-express-api-request-flow.svg)
 
 [Open the Day 4 Express API request flow](diagrams/day-04-express-api-request-flow.svg)
+
+![Day 5 in-memory Express API test](diagrams/day-05-in-memory-api-test.svg)
+
+[Open the Day 5 in-memory Express API test](diagrams/day-05-in-memory-api-test.svg)

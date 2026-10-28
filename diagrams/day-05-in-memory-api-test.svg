@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">In-memory Express API test flow</title>
+  <desc id="desc">A Node test runner imports an Express app, Supertest sends a request in memory, and assertions verify the status and JSON response without starting a network server.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101827"/><stop offset="1" stop-color="#164e63"/></linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f2937"/><stop offset="1" stop-color="#334155"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#67e8f9"/></marker>
+    <style>.label{font:600 20px Inter,Segoe UI,sans-serif;fill:#e2e8f0}.small{font:400 16px Inter,Segoe UI,sans-serif;fill:#cbd5e1}.code{font:600 16px Consolas,monospace;fill:#a5f3fc}.box{fill:url(#node);stroke:#64748b;stroke-width:2}.line{stroke:#67e8f9;stroke-width:4;fill:none;marker-end:url(#arrow)}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 8;fill:none}</style>
+  </defs>
+  <rect width="1200" height="560" rx="28" fill="url(#bg)"/>
+  <text x="70" y="70" class="label" font-size="30">Day 5: in-memory Express API test</text>
+  <text x="70" y="102" class="small">The test imports the app directly, so no server or localhost port is required.</text>
+  <rect x="70" y="200" width="220" height="150" rx="18" class="box"/><text x="180" y="245" text-anchor="middle" class="label">Node test runner</text><text x="180" y="285" text-anchor="middle" class="code">npm test</text><text x="180" y="320" text-anchor="middle" class="small">runs assertions</text>
+  <rect x="370" y="200" width="220" height="150" rx="18" class="box"/><text x="480" y="245" text-anchor="middle" class="label">Supertest</text><text x="480" y="285" text-anchor="middle" class="code">request(app)</text><text x="480" y="320" text-anchor="middle" class="small">creates request</text>
+  <rect x="670" y="180" width="240" height="190" rx="18" class="box"/><text x="790" y="225" text-anchor="middle" class="label">Express app</text><text x="790" y="270" text-anchor="middle" class="code">GET /health</text><text x="790" y="305" text-anchor="middle" class="small">route runs in memory</text><text x="790" y="340" text-anchor="middle" class="small">no app.listen()</text>
+  <rect x="990" y="215" width="150" height="120" rx="18" class="box"/><text x="1065" y="258" text-anchor="middle" class="label">Assert</text><text x="1065" y="292" text-anchor="middle" class="code">200 + JSON</text>
+  <path d="M290 275 H355" class="line"/><path d="M590 275 H655" class="line"/><path d="M910 275 H975" class="line"/>
+  <text x="322" y="258" text-anchor="middle" class="small">starts</text><text x="622" y="258" text-anchor="middle" class="small">sends</text><text x="942" y="258" text-anchor="middle" class="small">returns</text>
+  <path d="M790 390 V455 H480 V370" class="dash"/><text x="635" y="480" text-anchor="middle" class="small">Response is checked without opening port 3000</text>
+</svg>
